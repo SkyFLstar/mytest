@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd
+	http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.1.xsd
+	">
+    <!-- 配置springmvc的注解支持 struts2 -> springmvc  -->
+    <mvc:annotation-driven></mvc:annotation-driven>
+    <!-- 对控制器的注解进行扫描 -->
+    <context:component-scan base-package="com.hots.controller"></context:component-scan>
+    <context:component-scan base-package="com.hots.service"></context:component-scan>
+    <mvc:default-servlet-handler/>
+    <!-- mvc自带的servlet视图解析器 -->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix">
+            <value>/</value>
+        </property>
+        <!--  限定传入解析的文件后缀属性为jsp，即仅接收来自jsp的访问请求  -->
+        <property name="suffix">
+            <value>.jsp</value>
+        </property>
+    </bean>
+
+
+</beans>

@@ -1,0 +1,287 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+@font-face {
+    font-family: "STCaiyun";
+    src: url('STCaiyun.ttf');
+}
+
+@font-face {
+    font-family: "Hwhb;";
+    src: url('Hwhb.ttf');
+}
+
+.Middle_Div {
+    width: 100%;
+    height: 600px;
+    border-top: 1px solid #0E86CA;
+    background: -webkit-linear-gradient(bottom, transparent, transparent);
+}
+
+.Middle_Div div {
+    margin-top: 500px;
+    width: 100%;
+    height: 100px;
+    background: -ms-linear-gradient(right, transparent, #422C9B); /* IE 10 */
+    background: -moz-linear-gradient(right, transparent, #422C9B); /*火狐*/
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(transparent), to(#422C9B)); /*谷歌*/
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(transparent), to(#422C9B)); /* Safari 4-5, Chrome 1-9*/
+    background: -webkit-linear-gradient(left, transparent, #422C9B); /*Safari5.1 Chrome 10+*/
+    background: -o-linear-gradient(right, transparent, #422C9B); /*Opera 11.10+*/
+}
+
+.Middle_Div div img {
+    width: 130px;
+    height: 65px;
+    margin: 17px 15px auto 15px;
+    border: 2px #3C42B3 solid;
+}
+
+.nav-main {
+    position: fixed;
+    top: 0;
+    z-index: 12;
+    height: auto;
+    width: 100px;
+    color: #fff;
+    background: none;
+    margin-top: 200px;
+}
+
+.nav-main a {
+    color: #fff;
+    font-family: STCaiyun;
+    font-size: x-large;
+}
+
+.nav-box {
+    position: relative;
+    perspective: 200px;
+    -webkit-perspective: 200px;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    height: auto;
+    z-index: 0;
+}
+
+.nav-ul li a {
+    padding: 0;
+    margin: 0;
+    display: block;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    line-height: 0px;
+    background-color: #21133B;
+    position: relative;
+    transition: all .5s;
+    -moz-transition: all .5s;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    border-radius: 100px 100px 100px 100px;
+    text-decoration: none;
+}
+
+.nav-ul li a:before {
+    content: '';
+    position: absolute;
+    left: -240px;
+    top: 0px;
+    width: 200px;
+    height: 100%;
+    background: #629feb;
+    z-index: 1;
+    transform: skew(30deg, 0);
+    -webkit-transform: skew(30deg, 0);
+    -ms-transform: skew(30deg, 0);
+    -moz-transform: skew(30deg, 0);
+    -o-transform: skew(30deg, 0);
+    transition: all .5s;
+    -moz-transition: all .5s;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    border-radius: 10px 10px 10px 10px
+}
+
+.nav-ul li a:hover {
+    background: #357dd7;
+}
+
+.nav-ul li a:hover:before {
+    left: -30px;
+}
+
+.nav-ul li a:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    left: 0;
+    top: 20px;
+    z-index: 1;
+}
+
+.nav-ul li a span {
+    margin-left: 13px;
+    display: block;
+    line-height: 50px;
+    perspective: none;
+    position: relative;
+    z-index: 1;
+}
+
+.nav-slide {
+    margin-top: 110px;
+    position: fixed;
+    left: 100px;
+    top: 0;
+    width: 240px;
+    height: 250px;
+    background: #21133B;
+    transform: rotateY(120deg);
+    -webkit-transform: rotateY(120deg);
+    -moz-transform: rotateY(120deg);
+    -o-transform: rotateY(120deg);
+    -ms-transform: rotateY(120deg);
+    z-index: 99;
+    visibility: hidden;
+    transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transition: all .5s;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    transition-timing-function: cubic-bezier(.08, .72, .71, .96);
+    -webkit-transition-timing-function: cubic-bezier(.08, .72, .71, .96);
+    border-radius: 20px 20px 20px 20px;
+}
+
+.nav-slide.hover {
+    transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    z-index: 15;
+    visibility: visible;
+}
+
+.nav-slide-o ul {
+    list-style-type: none;
+    margin-top: 20px;
+}
+
+.nav-slide-o li a {
+    line-height: 50px;
+    display: block;
+    padding: 0 20px;
+    font-size: xx-large;
+    text-decoration: none;
+    overflow: hidden;
+    text-align: left;
+    position: relative;
+    transition: all .5s;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    font-family: Hwhb;
+}
+
+.nav-slide-o li a:before {
+    content: '';
+    position: absolute;
+    left: -230%;
+    top: 0px;
+    width: 200%;
+    height: 100%;
+    background: #629feb;
+    z-index: 1;
+    transform: skew(30deg, 0);
+    -webkit-transform: skew(30deg, 0);
+    -moz-transform: skew(30deg, 0);
+    -o-transform: skew(30deg, 0);
+    -ms-transform: skew(30deg, 0);
+    transition: all .5s;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+}
+
+.erweimaa {
+    width: 150px;
+    height: 150px;
+    margin-left: 45px;
+}
+
+.nav-slide-o li a:hover {
+    background: #357dd7;
+}
+
+.nav-slide-o li a:hover:before {
+    left: -60px;
+}
+
+.nav-slide-o li a span {
+    position: relative;
+    z-index: 1;
+}
+
+.nav-slide-o {
+    display: none;
+}
+
+.Bottom_Div {
+    width: auto;
+    height: auto;
+    margin-top: 50px;
+}
+
+.Bottom_Div ur {
+    float: left;
+    margin-left: 350px;
+}
+
+.Bottom_Div ur ul {
+    float: left;
+    margin-left: 30px;
+}
+
+.Bottom_Div a {
+    text-decoration: none;
+}
+
+.Bottom_Div ur ul a {
+    color: white;
+}
+
+.Bottom_Di ul {
+    color: whitesmoke;
+}
+
+.Bottom_Div {
+    margin-top: 400px;
+    background: -ms-linear-gradient(right, transparent, #422C9B); /* IE 10 */
+    background: -moz-linear-gradient(right, transparent, #422C9B); /*火狐*/
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(transparent), to(#422C9B)); /*谷歌*/
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(transparent), to(#422C9B)); /* Safari 4-5, Chrome 1-9*/
+    background: -webkit-linear-gradient(bottom, #422C9B, transparent); /*Safari5.1 Chrome 10+*/
+    background: -o-linear-gradient(right, transparent, #422C9B); /*Opera 11.10+*/
+}
+
+<!--
+-----------------------------------------------------------------------------------------分割线--------------------------------------------------------------------------------------- >

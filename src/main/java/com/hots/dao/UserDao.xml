@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hots.dao.UserDao">
+    <!-- mapper通过姓名指向协议将结果保存为User类型,查询结果以该类型在接口中进行映射 -->
+
+    <select id="login" resultType="com.hots.privateclass.User">
+        SELECT * FROM user_info where u_email = #{u_email} and u_password=#{u_password} ;
+    </select>
+    <insert id="signin" parameterType="com.hots.privateclass.User">
+        INSERT INTO
+        user_info(u_email, u_password, u_id, u_name, u_question, u_result, u_qq, u_phone,u_balacne,u_have,u_petname,u_head_img)
+        VALUES(#{u_email},#{u_password},#{u_id},#{u_name},#{u_question},#{u_result},#{u_qq},#{u_phone},#{u_balacne},#{u_have},#{u_petname},#{u_head_img})
+    </insert>
+    <update id="update" parameterType="com.hots.privateclass.User">
+        UPDATE user_info
+        set u_email=#{u_email}, u_password=#{u_password}, u_id=#{u_id}, u_name=#{u_name}, u_question=#{u_question}, u_result=#{u_result}, u_qq=#{u_qq}, u_phone=#{u_phone},u_balacne=#{u_balacne},u_have=#{u_have},u_petname=#{u_petname},u_head_img=#{u_head_img} </update>
+    <delete id="delete" parameterType="com.hots.privateclass.User">
+        delete from user_info where u_email=#{u_email} and u_question=#{u_question} and u_result=#{u_result}
+    </delete>
+
+    <select id="selectByEmail" resultType="com.hots.privateclass.User">
+        select * from user_info where u_email=#{u_email}
+        <where>
+            <if test=""></if>
+        </where>
+    </select>
+
+</mapper>
